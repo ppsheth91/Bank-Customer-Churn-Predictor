@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Bank_Churn Prediction</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='churn.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>  
+    <div style="color:Black">
+    <div style="background-color:Orange">
+    
+        <!-- Website Title -->
+    	<div class="container">
+    		<h3 class='container-heading'><span>Bank Churn Prediction</span></h3>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<form action="{{ url_for('predict')}}" method="post">
+            <h3>CreditScore eg. 500</h3><br><input id="first" name="CreditScore" required="required">
+            <h3>Age eg. 30</h3><br><input id="second" name="Age" required="required">
+            <h3>Tenure eg. 5</h3><br><input id="third" name="Tenure" required="required">
+            <h3>Bank Balance eg. 100000</h3><br><input id="fourth" name="Balance" required="required">
+            <h3>Number of Products with the bank eg. 3</h3><br><input id="fifth" name="NumOfProducts" required="required">
+            <h3>Estimated Salary eg. 150000</h3><br><input id="salary" name="EstimatedSalary" required="required">
+            </select>
+            <h3>Does the customer have a credit card?</h3><br><select name="HasCreditCard" id="card" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <h3>Is the customer an active member of the bank?</h3><br><select name="ActiveMember" id="member" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option> 
+            </select>
+            <h3>Geography</h3><br><select name="Geography" id="geo" required="required">
+                <option value="Germany">Germany</option>
+                <option value="Spain">Spain</option>
+                <option value="France">France</option>
+            </select>
+            <h3>Gender</h3><br><select name="Gender" id="gender" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <h3><input type="submit" class="my-cta-button" value="Predict">
+        	</form>	
+    	  </div>
+        <!-- Footer -->
+        <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href="https://github.com/ppsheth91"><i class="fab fa-github fa-lg contact-icon"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/prayag-sheth-aab17714/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+            <p class='footer-description'>Thanks - Prayag Sheth</p>
+        </div>
+    </body>
+    
+</html>

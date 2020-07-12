@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Bank Churn Prediction</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='churn.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+
+	
+        <!-- Website Title -->
+    	<div class="container">
+    		<h3 class='container-heading'><span>Bank Churn Prediction</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==True %}
+				<h3>Prediction: <span class='danger'>Oops! The customer will churn</span></h3>
+				<img class="gif" src="{{ url_for('static', filename='bank_churn.webp') }}" alt="Sad Image">
+			{% elif prediction==False %}
+				<h3>Prediction: <span class='safe'>Great! The customer will not churn</span></h3>
+				<img class="gif" src="{{ url_for('static', filename='bank_not_churn.webp') }}" alt="Not a spam image">
+			{% endif %}
+		</div>
+		  <!-- Footer -->
+        <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href="https://github.com/ppsheth91"><i class="fab fa-github fa-lg contact-icon"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/prayag-sheth-aab17714/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+            <p class='footer-description'>Thanks - Prayag Sheth</p>
+        </div>
+    </body>
+    
+</html>
